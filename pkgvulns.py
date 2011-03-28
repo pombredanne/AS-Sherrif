@@ -1,6 +1,6 @@
 # NetBSD pkg-vulnerabilities parsing
 #
-# Copyright (c) 2008 Paulo Matias
+# Copyright (c) 2011 Eduardo Lopes
 #
 # Permission to use, copy, modify, and distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -15,12 +15,17 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #
 
-import re, fnmatch
+import re, fnmatch,  sys
 
 def vuln_iterator(filename):
     """ Iterates through entries in the pkg-vulnerabilities file.
         Yields (pkgdesc, vulntype, vulnurl) tuples. """
-    f = open(filename)
+    try:
+        f = open(filename)
+    except:
+        strin = 'No access to file named: '+ filename+'. Aborting.\n' 
+        sys.stderr.write(strin)
+        sys.exit(1)
     for line in f:
         assert(isinstance(line, str))
         line = line.strip()

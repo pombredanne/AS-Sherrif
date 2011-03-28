@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-# $NetBSD: pkg-vulnerabilities,v 1.3817 2011/04/06 22:06:37 tez Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.3823 2011/04/08 20:57:53 tez Exp $
 #
 #FORMAT 1.1.0
 #
@@ -2906,7 +2906,7 @@ qemu<0.9.0		buffer-overflow			http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-
 qemu<0.9.1		buffer-overflow			http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6227
 qemu<0.10.0		information-disclosure		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0928
 instiki<0.13		cross-site-scripting		http://rubyforge.org/forum/forum.php?forum_id=22805
-freetype<2.3.4		denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3506
+freetype2<2.3.4		denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3506
 bzip2<1.0.5		denial-of-service		https://www.cert.fi/haavoittuvuudet/joint-advisory-archive-formats.html
 ircu<2.10.12.12nb1	denial-of-service		http://lists.grok.org.uk/pipermail/full-disclosure/2008-March/060906.html
 p7zip<4.57		unknown				https://www.cert.fi/haavoittuvuudet/joint-advisory-archive-formats.html
@@ -3290,7 +3290,7 @@ mit-krb5>=1.6<1.6.2	arbitrary-code-execution	http://web.mit.edu/kerberos/www/adv
 asterisk<1.2.26		security-bypass			http://downloads.digium.com/pub/security/AST-2007-027.html
 asterisk<1.2.28		denial-of-service		http://downloads.digium.com/pub/security/AST-2008-006.html
 net-snmp<5.4.1nb4	spoof-authenticated-packets	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0960
-freetype<2.3.6		arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1806
+freetype2<2.3.6		arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1806
 apache>2.0<2.0.63nb1	denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-2364
 apache>=2.2.0<2.2.8nb1	denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-2364
 openoffice2{,-bin}<2.4.1	arbitrary-code-execution	http://www.openoffice.org/security/cves/CVE-2008-2152.html
@@ -4927,7 +4927,7 @@ thunderbird<3.1.6	arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.
 scmcvs-[0-9]*		privilege-escalation	http://secunia.com/advisories/cve_reference/CVE-2010-3846/
 webkit-gtk<1.2.5	multiple-vulnerabilities	http://secunia.com/advisories/41871/
 freetype2<2.4.3nb1	buffer-overflow		http://secunia.com/advisories/41738/
-suse{,32}_freetype2-[0-9]*	buffer-overflow		http://secunia.com/advisories/41738/
+suse{,32}_freetype2-[0-9]*	buffer-overflow		http://secunia.com/advisories/44008/
 libsmi<0.4.8nb1		buffer-overflow		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2891
 python26<2.6.6nb3	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3493
 adobe-flash-plugin<10.1.102.64	arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3654
@@ -5157,7 +5157,6 @@ postfix<2.7.3		command-injection		http://www.kb.cert.org/vuls/id/555316
 postfix>=2.8.20100000<2.8.20110115	command-injection	http://www.kb.cert.org/vuls/id/555316
 TeXmacs-[0-9]*		privilege-escalation	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3394
 hiawatha-[0-9]*		multiple-vulnerabilities	http://www.hiawatha-webserver.org/changelog
-gdm<2.30.0		unknown-impact		http://secunia.com/advisories/43437/
 patch-[0-9]*		remote-system-access	http://secunia.com/advisories/43677/
 tiff<3.9.4nb2		remote-system-access	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0192
 suse{,32}_libtiff-[0-9]*	remote-system-access	http://secunia.com/advisories/43593/
@@ -5183,7 +5182,7 @@ cups<1.4.5		multiple-vulnerabilities	http://www.cups.org/articles.php?L597
 libzip<0.10		denial-of-service	http://secunia.com/advisories/43621/
 xenkernel33<3.3.2nb2	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1166
 xenkernel3<3.1.4nb5	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1166
-openslp-[0-9]*		denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3609
+openslp<1.2.1nb4	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3609
 quagga<0.99.18		denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1674
 quagga<0.99.18		denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1675
 moodle<2.0.2		multiple-vulnerabilities	http://secunia.com/advisories/43570/
@@ -5204,7 +5203,7 @@ xmlsec1<1.2.17		remote-system-access		http://cve.mitre.org/cgi-bin/cvename.cgi?n
 gdm>=2.28.0<2.32.1	privilege-escalation	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0727
 suse{,32}_krb5-[0-9]*	arbitrary-code-execution	http://secunia.com/advisories/44027/
 xymon<4.3.2		cross-site-scripting	http://secunia.com/advisories/44036/
-perl<5.14		remote-security-bypass	http://secunia.com/advisories/43921/
+perl<5.12.2nb2		remote-security-bypass	http://secunia.com/advisories/43921/
 asterisk<1.6.2.17.1	denial-of-service	http://secunia.com/advisories/43722/
 asterisk>=1.8<1.8.3.1	denial-of-service	http://secunia.com/advisories/43722/
 erlang-[0-9]*		remote-system-access	http://secunia.com/advisories/43898/
@@ -5213,16 +5212,23 @@ ruby1{8,9}-rack<1.1.2	remote-security-bypass	http://groups.google.com/group/rack
 ruby1{8,9}-rack>=1.2.0<1.2.2	remote-security-bypass	http://groups.google.com/group/rack-devel/browse_thread/thread/a1ec9e7880118867
 ruby1{8,9}-actionpack>=3.0<3.0.6	cross-site-scripting	http://weblog.rubyonrails.org/2011/4/6/rails-3-0-6-has-been-released
 xrdb<1.0.9		privilege-escalation	http://secunia.com/advisories/44040/
-#CHECKSUM SHA1 d6aa5c1b6b18f835aefe1232c55c61c5383cf6b0
-#CHECKSUM SHA512 d3c768f89fecf16917e28fb4ee54e3fe2aba659bd9caa6e7ff9bfda7fe58133afb93b2175729779cdc9cc92b7340aeec51e26d3c2f8984e2ba7317feecbde2ed
+libvpx<0.9.6		remote-system-access	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4489
+isc-dhclient-[0-9]*	remote-system-access	http://secunia.com/advisories/44037/
+libmodplug<0.8.8.2	remote-system-access	http://secunia.com/advisories/44054/
+roundcube<0.5.1		remote-security-bypass	http://secunia.com/advisories/44050/
+rsync<3.0.8		denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1097
+wordpress<3.1.1		multiple-vulnerabilities	http://secunia.com/advisories/44038/
+vlc-[0-9]*		remote-system-access	http://secunia.com/advisories/44064/
+#CHECKSUM SHA1 10544284dee1d7627b6d9878e00ed57d0bd75c1e
+#CHECKSUM SHA512 b04480a6d0740dec83f1a459d0ba8bfac455a006d34d8bea927db73d3075e6d30fc5613f2621cdc5588bbd2bbae18b25beb556fe2850322208a7a2361a8241e5
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (SunOS)
 
-iQEcBAEBAgAGBQJNnOPxAAoJEFfqyv27QCrY9xQIALUnarHpHF63+jM/WGQgpPWr
-pmaVlland3Mu4ou1jzj3GLmGKLwTXzZpq/mkoHDLfLqfFpvNcxEeZldB0vvzmoQ3
-N2iCPMAqHiHKmQaWa5dGi4c7ZU78oAXQkV65hMCnsRqt+qyKId6PVekenCwhezEh
-mi1W7SSMCFAh11mT7CRd6B+lRrIbI/VG8Bb9jsXpVOumu59dHbNx36qk7LmQ1Mro
-rwF9CvkPezYIYAZVSMmrq4fFako0cCUpvFrOsd6h/pU22To05YqlVsaWhCOzcqzv
-TtlTgXcGUzD/TAfGsfQI0JoEi5/4HSHLR86q+nXdcFZ9xWEwcxxxCVHJ+J6d9LM=
-=jgc9
+iQEcBAEBAgAGBQJNn3bVAAoJEFfqyv27QCrYoBUH/2bcN8joGYTnkV20GHbwQ2We
+oEF6DlBNn4U97Jyx5fp4HxSqA11nua05POjRJMYg47CkwwijxZQqBtDrD42aIkcb
+iKcGOtS6yzvUwkkRmzHPN7FG9wJddqnRzFJxH6T7TPczNpzf8TKYdrBEPKbk6Jd+
+Q3IGhfK0lIAmLgUepCznz9v2w0dv9xjWL7L5IZPfH3ij2Ep1bPZZuUxlQxPlPMRU
+kdFdAaxQs6j5j+2m4wDsKa9+oc46GmhQNOs+Wuqyg6AgbMAw4ClaH2yVeWM2k7B6
+DrxeVtb8AhqD06V0x8EoUNzsgRU07y7A8lk3zrFCjgu71+kf++IvcG8E/ZQrM3A=
+=/ntW
 -----END PGP SIGNATURE-----

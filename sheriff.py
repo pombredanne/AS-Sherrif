@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 #
 # Package vulnerability automatic sheriff
 #
-# Copyright (c) 2008 Paulo Matias
+# Copyright (c) 2011 Eduardo Lopes
 #
 # Permission to use, copy, modify, and distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -25,9 +25,26 @@ def usage():
 Package vulnerability automatic sheriff
 
 Usage: sheriff [-v pkg-vulnerabilities] [-t pkg-trans-table]
-               [-w warn-file] [-i ignored-urls]
+               [-w warn-file] [-i ignored-urls] [-u update the file prior to execution]
 """
     sys.exit(1)
+    
+def fetch(filename):
+    import urllib
+    try:
+        sys.stderr.write('Fetching the file from NetBSD website: \t\t \t')
+        infile = urllib.urlopen('http://ftp.netbsd.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities')
+        sys.stderr.write('DONE.\n')
+        try:
+            outfile = open(filename,  'w')
+        except:
+            outfile = open('pkg-vulnerabilities', 'w')
+        outfile.writelines(infile.readlines())   
+        
+    except:
+        sys.stderr.write('No access to remote file, check your internet connection and try again.\n')
+        
+
     
 def log(warn_file, msg):
     """ Log a msg to the warn_file. """
@@ -110,7 +127,7 @@ if __name__ == '__main__':
     warn_file = 'warn-file'
     ignore_file = 'ignored-urls'
     
-    try: opts, args = getopt.getopt(sys.argv[1:], 'hv:t:w:i:')
+    try: opts, args = getopt.getopt(sys.argv[1:], 'h:v:t:w:i:u')
     except: usage()
     for o, a in opts:
         if o == '-h':
@@ -123,5 +140,8 @@ if __name__ == '__main__':
             warn_file = a
         elif o == '-i':
             ignore_file = a
+        elif o == '-u':
+            fetch(vuln_file)
+        
     
     main(vuln_file, trans_file, warn_file, ignore_file)

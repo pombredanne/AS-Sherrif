@@ -15,14 +15,20 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #
 
-import re
+import re,  sys
 
 class Translator:
     pkgsrc_pkgs = {}
     pkgsrc_list = []
     def __init__(self, filename='pkg-trans-table'):
         """ Inits the translation database. """
-        f = open(filename)
+        try:
+            f = open(filename)
+        except:
+            strin = 'No access to '+ filename+'. Aborting.\n' 
+            sys.stderr.write(strin)
+            sys.exit(1)
+            
         for line in f:
             line = re.split('\s+', line.strip())
             self.pkgsrc_pkgs[line[0]] = line[1:]
